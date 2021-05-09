@@ -1,10 +1,10 @@
 FROM python
 
+ARG GRPC_VERSION=1.37.1
+
 ARG PROTOC_VERSION=3.16.0
 
 ARG PROTOC_ZIP=protoc-${PROTOC_VERSION}-linux-x86_64.zip
-
-ARG GRPC_VERSION=1.37.1
 
 RUN wget -P /tmp \
   https://github.com/protocolbuffers/protobuf/releases/download/v${PROTOC_VERSION}/${PROTOC_ZIP}
